@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { jqxBarGaugeModule }  from 'jqwidgets-ng/jqxbargauge';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    jqxBarGaugeModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
