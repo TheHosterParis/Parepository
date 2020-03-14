@@ -1,12 +1,32 @@
+<div class="card" style="width: 18rem;">
+  <img src="assets\image\genice.JPG" class="card-img-top" alt="genice">
+  <div class="card-body">
+    <h5 class="card-title">Ration pour génices</h5>
+    <p class="card-text">Calcul de rations spécifiques pour les génices.</p>
+    <a href="#" class="btn btn-primary">Calcul</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="assets\image\tarie.jpg" class="card-img-top" alt="tarie">
+  <div class="card-body">
+    <h5 class="card-title">Ration pour taries</h5>
+    <p class="card-text">Calcul de rations spécifiques pour les taries.</p>
+    <a href="#" class="btn btn-primary">Calcul</a>
+  </div>
+</div>
+
 <div class="jumbotron">
-  <h1>Angular Graph Tutorial</h1>
-  <p class="lead">This sample app shows how to use the Microsoft Graph API from Angular</p>
-  <div *ngIf="authenticated; then welcomeUser else signInPrompt"></div>
-  <ng-template #welcomeUser>
-    <h4>Welcome {{ user.displayName }}!</h4>
-    <p>Use the navigation bar at the top of the page to get started.</p>
-  </ng-template>
-  <ng-template #signInPrompt>
-    <a href="javascript:undefined" class="btn btn-primary btn-large" role="button" (click)="signIn()">Click here to sign in</a>
-  </ng-template>
+  <h1>Bienvenue sur votre site spécialisé</h1>
+  <p class="lead">Découvrez toutes les possibilités de ce site</p>
+  <div *ngIf="authenticated">vous êtes authentifié</div>
+</div>
+
+<div  *ngFor="let culture of cultures" class="card" style="width: 18rem;">
+  <div class="card-body">
+        <h1>{{culture.idMetier}}</h1>
+        <p>{{culture.libelle}}</p>
+        <p>{{culture.groupeCultures.idMetier}}</p>
+        <p>{{culture.groupeCultures.libelle}}</p>
+        <p>{{culture.idMetier}}</p>
+  </div>
 </div>

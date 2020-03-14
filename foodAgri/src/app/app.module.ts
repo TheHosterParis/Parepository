@@ -12,6 +12,10 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
 import { AlertsComponent } from './alerts/alerts.component';
 import { RationComponent } from './ration/ration.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpComponent } from './http/http.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import {FormsModule} from '@angular/forms';
 
 library.add(faExternalLinkAlt);
 library.add(faUserCircle);
@@ -23,13 +27,17 @@ library.add(faUserCircle);
     FooterComponent,
     AuthentComponent,
     AlertsComponent,
-    RationComponent
+    RationComponent,
+    HttpComponent,
+    AcceuilComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -33,13 +33,27 @@ export class HeaderComponent implements OnInit {
     this.showForm = !this.showForm;
   }
 
-  signIn(): void {
+  signIn(email, password): void {
     // Temporary
     this.authenticated = true;
     this.user = {
-      displayName: 'Adele Vance',
-      email: 'AdeleV@contoso.com'
+      email,
+      password
     };
+  }
+
+  onSubmit(formData): void {
+    const email = 'y.mouenmakoua@gmail.com';
+    const mdp = '1789';
+    if (formData.email === email && formData.pwd === mdp) {
+      alert('Vous êtes désormais connecté : ' + formData.email);
+      console.log(formData);
+      this.signIn(formData.email, formData.pwd);
+    } else {
+      alert('mauvais login');
+      console.log(formData.email);
+      console.log(formData.pwd);
+    }
   }
 
   signOut(): void {

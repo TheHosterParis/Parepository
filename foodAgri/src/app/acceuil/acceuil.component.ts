@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-acceuil',
@@ -7,16 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcceuilComponent implements OnInit {
 
+  cultures: any;
   // Is a user logged in?
   authenticated: boolean;
   // The user
   user: any;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.authenticated = false;
     this.user = {};
+    this.apiService.getCultures().subscribe((data) => {
+      console.log(data);
+      this.cultures = data;
+    });
   }
 
   signIn(): void {
