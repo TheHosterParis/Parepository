@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpComponent } from './http/http.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import {FormsModule} from '@angular/forms';
+import { CalculatriceComponent } from './calculatrice/calculatrice.component';
+import { jqxBarGaugeModule } from 'jqwidgets-ng/jqxbargauge';
 
 library.add(faExternalLinkAlt);
 library.add(faUserCircle);
@@ -29,7 +31,8 @@ library.add(faUserCircle);
     AlertsComponent,
     RationComponent,
     HttpComponent,
-    AcceuilComponent
+    AcceuilComponent,
+    CalculatriceComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ library.add(faUserCircle);
     NgbModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    jqxBarGaugeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

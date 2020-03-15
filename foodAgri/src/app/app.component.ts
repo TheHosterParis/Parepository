@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'foodAgri';
+  values: number[] = [102, 115, 130, 137];
 }
