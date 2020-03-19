@@ -149,10 +149,17 @@ titlePadding: any = { left: 0, top: 0, right: 0, bottom: 10 };
   onSubmit(formData): void {
     console.log(this.rations);
     console.log(formData.rations);
+    this.rations = formData.rations;
+    this.ble = formData.ble;
     this.dataStatCounter[0].Share = formData.ble;
+    this.colza = formData.colza;
     this.dataStatCounter[1].Share = formData.colza;
+    this.paille = formData.paille;
     this.dataStatCounter[2].Share = formData.paille;
+    this.mais = formData.mais;
     this.dataStatCounter[3].Share = formData.mais;
+    console.log(this.rations);
+    console.log(formData.rations);
   }
 
 }
