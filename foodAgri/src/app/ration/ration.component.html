@@ -1,16 +1,49 @@
-<div class="card" style="width: 18rem;">
-  <img src="assets\image\genice.JPG" class="card-img-top" alt="genice">
-  <div class="card-body">
-    <h5 class="card-title">Ration pour génices</h5>
-    <p class="card-text">Calcul de rations spécifiques pour les génices.</p>
-    <a href="#" class="btn btn-primary">Calcul</a>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="assets\image\tarie.jpg" class="card-img-top" alt="tarie">
-  <div class="card-body">
-    <h5 class="card-title">Ration pour taries</h5>
-    <p class="card-text">Calcul de rations spécifiques pour les taries.</p>
-    <a href="#" class="btn btn-primary">Calcul</a>
-  </div>
+<div class="d-flex bd-highlight">
+  <form #rationForm="ngForm">
+    <div class="p-2 flex-fill bd-highlight">
+      <h1>Nombre de rations</h1>
+      <input type="number" name="rations" placeholder="rations" ngModel>
+    </div>
+    <div class="p-2 flex-fill bd-highlight">
+      <h2>blé</h2>
+      <input type="number" name="ble" placeholder="blé" ngModel>
+    </div>
+    <div class="p-2 flex-fill bd-highlight">
+      <h2>3 pelles de minéraux</h2>
+    </div>
+    <div class="p-2 flex-fill bd-highlight">
+      <h2>1/2 sac de bicarbonate</h2>
+    </div>
+    <div class="p-2 flex-fill bd-highlight">
+      <h2>1 sac de calcium</h2>
+    </div>
+    <div class="p-2 flex-fill bd-highlight">
+      <h2>1/3 sac de sel</h2>
+    </div>
+    <div class="p-2 flex-fill bd-highlight">
+      <h2>2 pelles alu d'urée</h2>
+      <input type="number" name="uree" placeholder="urée" ngModel>
+    </div>
+
+    <div class="p-2 flex-fill bd-highlight">
+      <h2>Colza</h2>
+      <input type="number" name="colza" placeholder="colza" ngModel>
+    </div>
+
+    <div class="p-2 flex-fill bd-highlight">
+      <h2>Paille</h2>
+      <input type="number" name="paille" placeholder="paille" ngModel>
+    </div>
+
+    <div class="p-2 flex-fill bd-highlight">
+      <h2>1 round d'herbe enrubhannée</h2>
+    </div>
+    <div class="p-2 flex-fill bd-highlight">
+      <p>laissez tourner 5m, 2/3 sac de méthio protect, rajouter maïs jusqu'à 3T, compléter jusqu'à </p>
+    </div>
+    <div class="p-2 flex-fill bd-highlight">
+      <h2>Maïs</h2>
+      <input type="number" name="mais" placeholder="mais" ngModel>
+    </div>
+  </form>
 </div>

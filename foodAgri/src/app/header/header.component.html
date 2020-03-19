@@ -15,6 +15,9 @@
         </li>
       </ul>
       <ul class="navbar-nav justify-content-end">
+        <li *ngIf="authenticated" class="nav-item">
+          <a routerLink="/calculatrice" class="nav-link" routerLinkActive="active">Calculatrice</a>
+        </li>
         <li class="nav-item">
           <a  class="nav-link" routerLink="/doc" target="_blank">
            Docs
