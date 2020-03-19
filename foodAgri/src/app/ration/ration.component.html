@@ -1,49 +1,72 @@
-<div class="d-flex bd-highlight">
-  <form #rationForm="ngForm">
-    <div class="p-2 flex-fill bd-highlight">
-      <h1>Nombre de rations</h1>
-      <input type="number" name="rations" placeholder="rations" ngModel>
-    </div>
-    <div class="p-2 flex-fill bd-highlight">
-      <h2>blé</h2>
-      <input type="number" name="ble" placeholder="blé" ngModel>
-    </div>
-    <div class="p-2 flex-fill bd-highlight">
-      <h2>3 pelles de minéraux</h2>
-    </div>
-    <div class="p-2 flex-fill bd-highlight">
-      <h2>1/2 sac de bicarbonate</h2>
-    </div>
-    <div class="p-2 flex-fill bd-highlight">
-      <h2>1 sac de calcium</h2>
-    </div>
-    <div class="p-2 flex-fill bd-highlight">
-      <h2>1/3 sac de sel</h2>
-    </div>
-    <div class="p-2 flex-fill bd-highlight">
-      <h2>2 pelles alu d'urée</h2>
-      <input type="number" name="uree" placeholder="urée" ngModel>
-    </div>
+<h1>Calcul de la ration</h1>
+  <div class="d-flex bd-highlight" class="align-middle">
+    <form #rationForm="ngForm" (ngSubmit)="onSubmit(rationForm.value)">
+      <div class="p-2 flex-fill bd-highlight">
+        <h1>Nombre de rations</h1>
+        <button type="button" (click)="getOperation('+',1,'rations')" class="operator" value="ration">+</button>
+        <input type="text" name="rations" placeholder="rations" [ngModel]="rations">
+        <button type="button" (click)="getOperation('-',1,'rations')" class="operator" value="ration">-</button>
+      </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <h2>blé</h2>
+        <button type="button" (click)="getOperation('+',1,'ble')" class="operator" value="ble">+</button>
+        <input type="text" name="ble" placeholder="blé" [ngModel]="ble">
+        <button type="button" (click)="getOperation('-',1,'ble')" class="operator" value="ble">-</button>
+        kg
+      </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <h2>3 pelles de minéraux</h2>
+      </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <h2>1/2 sac de bicarbonate</h2>
+      </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <h2>1 sac de calcium</h2>
+      </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <h2>1/3 sac de sel</h2>
+      </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <h2>2 pelles alu d'urée</h2>
+      </div>
 
-    <div class="p-2 flex-fill bd-highlight">
-      <h2>Colza</h2>
-      <input type="number" name="colza" placeholder="colza" ngModel>
-    </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <h2>Colza</h2>
+        <button type="button" (click)="getOperation('+',1,'colza')" class="operator" value="+">+</button>
+        <input type="text" name="colza" placeholder="colza" [ngModel]="colza">
+        <button type="button" (click)="getOperation('-',1,'colza')" class="operator" value="-">-</button>
+      </div>
 
-    <div class="p-2 flex-fill bd-highlight">
-      <h2>Paille</h2>
-      <input type="number" name="paille" placeholder="paille" ngModel>
-    </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <h2>Paille</h2>
+        <button  type="button" (click)="getOperation('+',1,'paille')" class="operator" value="+">+</button>
+        <input type="text" name="paille" placeholder="paille" [ngModel]="paille">
+        <button type="button" (click)="getOperation('-',1,'paille')" class="operator" value="-">-</button>
+      </div>
 
-    <div class="p-2 flex-fill bd-highlight">
-      <h2>1 round d'herbe enrubhannée</h2>
-    </div>
-    <div class="p-2 flex-fill bd-highlight">
-      <p>laissez tourner 5m, 2/3 sac de méthio protect, rajouter maïs jusqu'à 3T, compléter jusqu'à </p>
-    </div>
-    <div class="p-2 flex-fill bd-highlight">
-      <h2>Maïs</h2>
-      <input type="number" name="mais" placeholder="mais" ngModel>
-    </div>
-  </form>
-</div>
+      <div class="p-2 flex-fill bd-highlight">
+        <h2>Instructions</h2>
+        <input class="text-justify" type="text" name="instruction" placeholder="instruction" [ngModel]="instruction">
+      </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <p><input class="text-break" type="text" name="instruction" placeholder="instruction" [ngModel]="instruction2"></p>
+      </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <h2>Maïs</h2>
+        <button type="button" (click)="getOperation('+',1,'mais')" class="operator" value="+">+</button>
+        <input type="text" name="mais" placeholder="mais" [ngModel]="mais">
+        <button type="button" (click)="getOperation('-',1,'mais')" class="operator" value="-">-</button>
+      </div>
+      <input type = "submit" value = "Modifier" (click)="modifier()">
+      <p *ngIf="modified">Modifications sauvegardées</p>
+    </form>
+  </div>
+
+  <jqxChart *ngIf="modified" style="float: left"
+  [width]="400" [height]="250"
+  [title]="''"
+  [description]="charts[0].title"
+  [showLegend]="true" [enableAnimations]="false" [padding]="padding"
+  [titlePadding]="titlePadding" [source]="charts[0].dataSource" [showBorderLine]="true"
+  [seriesGroups]="seriesGroups" [colorScheme]="'scheme03'">
+</jqxChart>
