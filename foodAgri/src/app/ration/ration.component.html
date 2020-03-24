@@ -11,18 +11,18 @@
       <div class="card-body">
         <label><h4>blé</h4></label>
         <button type="button" (click)="getOperation('+',1,'ble')" class="operator" value="ble">+</button>
-        <input type="text" name="ble" placeholder="blé" [ngModel]="ble" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
+        <input type="text" name="ble" placeholder="blé" [(ngModel)]="ble" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
         <button type="button" (click)="getOperation('-',1,'ble')" class="operator" value="ble">-</button>
-        <input size="3" type="text" name="blexRation" [ngModel]="blerxRation" disabled>
+        <input size="3" type="text" name="blexRation" [(ngModel)]="blerxRation" >
         kg
       </div>
-      
+
       <div class="card-body">
         <label><h4>Colza</h4></label>
         <button type="button" (click)="getOperation('+',1,'colza')" class="operator" value="+">+</button>
         <input type="text" name="colza" placeholder="colza" [ngModel]="colza" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
         <button type="button" (click)="getOperation('-',1,'colza')" class="operator" value="-">-</button>
-      <input size="3" type="text" name="colzaxRation" [ngModel]="colzaxRation" disabled>
+      <input size="3" type="text" name="colzaxRation" [ngModel]="colzaxRation" >
       kg
       </div>
 
@@ -31,7 +31,7 @@
         <button type="button" (click)="getOperation('+',1,'paille')" class="operator" value="+">+</button>
         <input type="text" name="paille" placeholder="paille" [ngModel]="paille" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
         <button type="button" (click)="getOperation('-',1,'paille')" class="operator" value="-">-</button>
-      <input size="3" type="text" name="paillexRation" [ngModel]="paillexRation" disabled>
+      <input size="3" type="text" name="paillexRation" [ngModel]="paillexRation" >
       kg
       </div>
       <div class="card-body">
@@ -39,34 +39,34 @@
         <button type="button" (click)="getOperation('+',1,'mais')" class="operator" value="+">+</button>
         <input type="text" name="mais" placeholder="mais" [ngModel]="mais" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
         <button type="button" (click)="getOperation('-',1,'mais')" class="operator" value="-">-</button>
-      <input size="2" type="text" name="maisxRation" [ngModel]="maisxRation" disabled>
+      <input size="2" type="text" name="maisxRation" [ngModel]="maisxRation" >
       kg
       </div>
       <div class="card-body">
       <h4>pelles de minéraux</h4>
         <input size="1" type="text" name="mineraux" placeholder="mineraux" [ngModel]="mineraux" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
-        <!-- <input size="1" type="text" name="minerauxxRation" [ngModel]="minerauxxRation" disabled> -->
+        <!-- <input size="1" type="text" name="minerauxxRation" [ngModel]="minerauxxRation" > -->
       </div>
       <div class="card-body">
       <h4>sac de bicarbonate</h4>
         <input size="1" type="text" name="bicarbonate" placeholder="bicarbonate" [ngModel]="bicarbonate" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
-      <!-- <input size="1" type="text" name="bicarbonatexRation" [ngModel]="bicarbonatexRation" disabled> -->
+      <!-- <input size="1" type="text" name="bicarbonatexRation" [ngModel]="bicarbonatexRation" > -->
       </div>
       <div class="card-body">
       <h4>sac de calcium</h4>
         <input size="1" type="text" name="calcium" placeholder="calcium" [ngModel]="calcium" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
-      <!-- <input size="1" type="text" name="calciumxRation" [ngModel]="calciumxRation" disabled> -->
+      <!-- <input size="1" type="text" name="calciumxRation" [ngModel]="calciumxRation" > -->
       </div>
       <div class="card-body">
       <h4>sac de sel</h4>
         <input size="1" type="text" name="sel" placeholder="sel" [ngModel]="sel" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
-      <!-- <input size="1" type="text" name="selxRation" [ngModel]="selxRation" disabled> -->
+      <!-- <input size="1" type="text" name="selxRation" [ngModel]="selxRation" > -->
       </div>
       <div class="card-body">
       <h4>pelles d'urée</h4>
         <input size="1" type="text" name="urée" placeholder="urée" [ngModel]="uree" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
-      
-      <!-- <input size="1" type="text" name="ureexRation" [ngModel]="ureexRation" disabled> -->
+
+      <!-- <input size="1" type="text" name="ureexRation" [ngModel]="ureexRation" > -->
       </div>
       <div class="card-body">
         <h4>Instructions</h4>

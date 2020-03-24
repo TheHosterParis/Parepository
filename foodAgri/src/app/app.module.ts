@@ -23,7 +23,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { jqxMaskedInputModule } from 'jqwidgets-ng/jqxmaskedinput';
 import { jqxButtonModule } from 'jqwidgets-ng/jqxbuttons';
 import { SideBarComponent } from './side-bar/side-bar.component';
-
+import { ApiService } from './api.service';
+import { VacheComponent } from './vache/vache.component';
+import { InfoComponent } from './info/info.component';
 library.add(faExternalLinkAlt);
 library.add(faUserCircle);
 
@@ -39,7 +41,9 @@ library.add(faUserCircle);
     AcceuilComponent,
     CalculatriceComponent,
     DashboardComponent,
-    SideBarComponent
+    SideBarComponent,
+    VacheComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,7 @@ library.add(faUserCircle);
     jqxMaskedInputModule,
     jqxButtonModule,
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

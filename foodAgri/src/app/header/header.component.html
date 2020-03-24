@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <div class="container">
-    <a routerLink="/" class="navbar-brand">FoodRation</a>
+    <a routerLink="/acceuil" class="navbar-brand">FoodRation</a>
     <button class="navbar-toggler" type="button" (click)="toggleNavBar()" [attr.aria-expanded]="showNav"
     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -8,13 +8,19 @@
     <div class="collapse navbar-collapse" [class.show]="showNav" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a routerLink="/" class="nav-link" routerLinkActive="active">Acceuil</a>
+          <a routerLink="/acceuil" class="nav-link" routerLinkActive="active">Acceuil</a>
         </li>
         <li *ngIf="authenticated" class="nav-item">
-          <a href="/ration" class="nav-link" routerLinkActive="active">Calcul de ration</a>
+          <a routerLink="/ration" class="nav-link" routerLinkActive="active">Calcul de ration</a>
         </li>
         <li *ngIf="authenticated" class="nav-item">
           <a routerLink="/dashboard" class="nav-link" routerLinkActive="active">feuille de route</a>
+        </li>
+        <li *ngIf="authenticated" class="nav-item">
+          <a routerLink="/vache" class="nav-link" routerLinkActive="active">présentations des vaches</a>
+        </li>
+        <li *ngIf="authenticated" class="nav-item">
+          <a routerLink="/http" class="nav-link" routerLinkActive="active">Data à suivre</a>
         </li>
       </ul>
       <ul class="navbar-nav justify-content-end">
@@ -22,7 +28,7 @@
           <a routerLink="/calculatrice" class="nav-link" routerLinkActive="active">Calculatrice</a>
         </li>
         <li class="nav-item">
-          <a  class="nav-link" routerLink="/doc" target="_self">
+          <a  class="nav-link" routerLink="/info" target="_self">
            Docs
           </a>
         </li>
@@ -52,3 +58,4 @@
     </div>
   </div>
 </nav>
+<router-outlet></router-outlet>
