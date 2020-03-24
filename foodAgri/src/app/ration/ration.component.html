@@ -1,72 +1,101 @@
-<h1>Calcul de la ration</h1>
-  <div class="d-flex bd-highlight" class="align-middle">
+<title>Calcul de la ration</title>
+<div class="card w-75" style="text-align: center;">
     <form #rationForm="ngForm" (ngSubmit)="onSubmit(rationForm.value)">
-      <div class="p-2 flex-fill bd-highlight">
-        <h1>Nombre de rations</h1>
+      <div class="card-body">
+        <h3>Nombre de rations</h3>
         <button type="button" (click)="getOperation('+',1,'rations')" class="operator" value="ration">+</button>
-        <input type="text" name="rations" placeholder="rations" [ngModel]="rations">
+        <input type="text" name="rations" placeholder="rations" [ngModel]="rations" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
         <button type="button" (click)="getOperation('-',1,'rations')" class="operator" value="ration">-</button>
+      <input type = "submit" value = "Calculer" (click)="modifier()">
       </div>
-      <div class="p-2 flex-fill bd-highlight">
-        <h2>blé</h2>
+      <div class="card-body">
+        <label><h4>blé</h4></label>
         <button type="button" (click)="getOperation('+',1,'ble')" class="operator" value="ble">+</button>
-        <input type="text" name="ble" placeholder="blé" [ngModel]="ble">
+        <input type="text" name="ble" placeholder="blé" [ngModel]="ble" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
         <button type="button" (click)="getOperation('-',1,'ble')" class="operator" value="ble">-</button>
+        <input size="3" type="text" name="blexRation" [ngModel]="blerxRation" disabled>
         kg
       </div>
-      <div class="p-2 flex-fill bd-highlight">
-        <h2>3 pelles de minéraux</h2>
-      </div>
-      <div class="p-2 flex-fill bd-highlight">
-        <h2>1/2 sac de bicarbonate</h2>
-      </div>
-      <div class="p-2 flex-fill bd-highlight">
-        <h2>1 sac de calcium</h2>
-      </div>
-      <div class="p-2 flex-fill bd-highlight">
-        <h2>1/3 sac de sel</h2>
-      </div>
-      <div class="p-2 flex-fill bd-highlight">
-        <h2>2 pelles alu d'urée</h2>
-      </div>
-
-      <div class="p-2 flex-fill bd-highlight">
-        <h2>Colza</h2>
+      
+      <div class="card-body">
+        <label><h4>Colza</h4></label>
         <button type="button" (click)="getOperation('+',1,'colza')" class="operator" value="+">+</button>
-        <input type="text" name="colza" placeholder="colza" [ngModel]="colza">
+        <input type="text" name="colza" placeholder="colza" [ngModel]="colza" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
         <button type="button" (click)="getOperation('-',1,'colza')" class="operator" value="-">-</button>
+      <input size="3" type="text" name="colzaxRation" [ngModel]="colzaxRation" disabled>
+      kg
       </div>
 
-      <div class="p-2 flex-fill bd-highlight">
-        <h2>Paille</h2>
-        <button  type="button" (click)="getOperation('+',1,'paille')" class="operator" value="+">+</button>
-        <input type="text" name="paille" placeholder="paille" [ngModel]="paille">
+      <div class="card-body">
+        <label><h4>Paille</h4></label>
+        <button type="button" (click)="getOperation('+',1,'paille')" class="operator" value="+">+</button>
+        <input type="text" name="paille" placeholder="paille" [ngModel]="paille" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
         <button type="button" (click)="getOperation('-',1,'paille')" class="operator" value="-">-</button>
+      <input size="3" type="text" name="paillexRation" [ngModel]="paillexRation" disabled>
+      kg
       </div>
-
-      <div class="p-2 flex-fill bd-highlight">
-        <h2>Instructions</h2>
+      <div class="card-body">
+        <label><h4>Maïs</h4></label>
+        <button type="button" (click)="getOperation('+',1,'mais')" class="operator" value="+">+</button>
+        <input type="text" name="mais" placeholder="mais" [ngModel]="mais" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
+        <button type="button" (click)="getOperation('-',1,'mais')" class="operator" value="-">-</button>
+      <input size="2" type="text" name="maisxRation" [ngModel]="maisxRation" disabled>
+      kg
+      </div>
+      <div class="card-body">
+      <h4>pelles de minéraux</h4>
+        <input size="1" type="text" name="mineraux" placeholder="mineraux" [ngModel]="mineraux" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
+        <!-- <input size="1" type="text" name="minerauxxRation" [ngModel]="minerauxxRation" disabled> -->
+      </div>
+      <div class="card-body">
+      <h4>sac de bicarbonate</h4>
+        <input size="1" type="text" name="bicarbonate" placeholder="bicarbonate" [ngModel]="bicarbonate" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
+      <!-- <input size="1" type="text" name="bicarbonatexRation" [ngModel]="bicarbonatexRation" disabled> -->
+      </div>
+      <div class="card-body">
+      <h4>sac de calcium</h4>
+        <input size="1" type="text" name="calcium" placeholder="calcium" [ngModel]="calcium" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
+      <!-- <input size="1" type="text" name="calciumxRation" [ngModel]="calciumxRation" disabled> -->
+      </div>
+      <div class="card-body">
+      <h4>sac de sel</h4>
+        <input size="1" type="text" name="sel" placeholder="sel" [ngModel]="sel" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
+      <!-- <input size="1" type="text" name="selxRation" [ngModel]="selxRation" disabled> -->
+      </div>
+      <div class="card-body">
+      <h4>pelles d'urée</h4>
+        <input size="1" type="text" name="urée" placeholder="urée" [ngModel]="uree" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))">
+      
+      <!-- <input size="1" type="text" name="ureexRation" [ngModel]="ureexRation" disabled> -->
+      </div>
+      <div class="card-body">
+        <h4>Instructions</h4>
         <input class="text-justify" type="text" name="instruction" placeholder="instruction" [ngModel]="instruction">
       </div>
-      <div class="p-2 flex-fill bd-highlight">
+      <div class="card-body">
         <p><input class="text-break" type="text" name="instruction" placeholder="instruction" [ngModel]="instruction2"></p>
       </div>
-      <div class="p-2 flex-fill bd-highlight">
-        <h2>Maïs</h2>
-        <button type="button" (click)="getOperation('+',1,'mais')" class="operator" value="+">+</button>
-        <input type="text" name="mais" placeholder="mais" [ngModel]="mais">
-        <button type="button" (click)="getOperation('-',1,'mais')" class="operator" value="-">-</button>
-      </div>
+
       <input type = "submit" value = "Modifier" (click)="modifier()">
       <p *ngIf="modified">Modifications sauvegardées</p>
     </form>
   </div>
+  <br>
 
-  <jqxChart *ngIf="modified" style="float: left"
-  [width]="400" [height]="250"
-  [title]="''"
-  [description]="charts[0].title"
-  [showLegend]="true" [enableAnimations]="false" [padding]="padding"
-  [titlePadding]="titlePadding" [source]="charts[0].dataSource" [showBorderLine]="true"
-  [seriesGroups]="seriesGroups" [colorScheme]="'scheme03'">
-</jqxChart>
+<!--   <div id='jqxWidget' style="font-size: 13px; font-family: Verdana;">
+    <div style='margin-top: 10px;'>
+      {{rations}}
+    </div>
+    <jqxMaskedInput #numericInput
+                    [mask]="'###'"
+                    [width]="250"
+                    [height]="25">
+    </jqxMaskedInput>
+  </div> -->
+
+  <div class="card w-50" style="text-align: center;">
+    <jqxChart *ngIf="modified" [width]="400" [height]="250" [title]="''" [description]="charts[0].title"
+      [showLegend]="true" [enableAnimations]="false" [padding]="padding" [titlePadding]="titlePadding"
+      [source]="charts[0].dataSource" [showBorderLine]="true" [seriesGroups]="seriesGroups" [colorScheme]="'scheme03'">
+    </jqxChart>
+  </div>

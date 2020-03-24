@@ -19,6 +19,10 @@ import {FormsModule} from '@angular/forms';
 import { CalculatriceComponent } from './calculatrice/calculatrice.component';
 import { jqxBarGaugeModule } from 'jqwidgets-ng/jqxbargauge';
 import { jqxChartModule } from 'jqwidgets-ng/jqxchart';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { jqxMaskedInputModule } from 'jqwidgets-ng/jqxmaskedinput';
+import { jqxButtonModule } from 'jqwidgets-ng/jqxbuttons';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 library.add(faExternalLinkAlt);
 library.add(faUserCircle);
@@ -33,7 +37,9 @@ library.add(faUserCircle);
     RationComponent,
     HttpComponent,
     AcceuilComponent,
-    CalculatriceComponent
+    CalculatriceComponent,
+    DashboardComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,9 @@ library.add(faUserCircle);
     HttpClientModule,
     FormsModule,
     jqxBarGaugeModule,
-    jqxChartModule
+    jqxChartModule,
+    jqxMaskedInputModule,
+    jqxButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -31,6 +31,7 @@
     "font-awesome": "^4.7.0",
     "fontawesome": "^5.6.3",
     "jqwidgets-ng": "^9.0.0",
+    "mongoose": "^5.9.6",
     "msal": "^1.2.1",
     "rxjs": "~6.5.3",
     "rxjs-compat": "^6.5.4",

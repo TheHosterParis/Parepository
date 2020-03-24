@@ -10,13 +10,32 @@ export class RationComponent implements OnInit {
 
   rations = '450';
   ble = '150';
+  blerxRation= Number(this.ble)*Number(this.rations);
   indiceBle = 1;
   colza = '10';
+  colzaxRation= Number(this.colza)*Number(this.rations);
   indiceColza = 1;
   paille = '300';
+  paillexRation= Number(this.paille)*Number(this.rations);
   indicePaille = 1;
   mais = '50';
+  maisxRation= Number(this.mais)*Number(this.rations);
   indiceMais = 1;
+  mineraux = '3';
+  minerauxxRation= Number(this.mineraux)*Number(this.rations);
+  indiceMineraux = 1;
+  bicarbonate = '1';
+  bicarbonatexRation= Number(this.bicarbonate)*Number(this.rations);
+  indice = 1;
+  calcium = '1';
+  calciumxRation= Number(this.calcium)*Number(this.rations);
+  indiceCalcium = 1;
+  sel = '1';
+  selxRation= Number(this.sel)*Number(this.rations);
+  indiceSel = 1;
+  uree = '1';
+  ureexRation= Number(this.uree)*Number(this.rations);
+  indiceUree = 1;
   currentNumber = '0';
   firstOperand = null;
   number = null;
@@ -112,6 +131,7 @@ titlePadding: any = { left: 0, top: 0, right: 0, bottom: 10 };
         return this.rations;
       case 'ble':
         return this.ble;
+        return this.blerxRation;
       case 'colza':
         return this.colza;
       case 'paille':
@@ -127,6 +147,7 @@ titlePadding: any = { left: 0, top: 0, right: 0, bottom: 10 };
         return this.rations = aliment;
       case 'ble':
         return this.ble = aliment;
+        return this 
       case 'colza':
         return this.colza = aliment;
       case 'paille':
@@ -151,15 +172,18 @@ titlePadding: any = { left: 0, top: 0, right: 0, bottom: 10 };
     console.log(formData.rations);
     this.rations = formData.rations;
     this.ble = formData.ble;
+    this.blerxRation= Number(this.ble)*Number(this.rations);
     this.dataStatCounter[0].Share = formData.ble;
     this.colza = formData.colza;
+    this.colzaxRation= Number(this.colza)*Number(this.rations);
     this.dataStatCounter[1].Share = formData.colza;
     this.paille = formData.paille;
+    this.paillexRation= Number(this.paille)*Number(this.rations);
     this.dataStatCounter[2].Share = formData.paille;
     this.mais = formData.mais;
+    this.maisxRation= Number(this.mais)*Number(this.rations);
     this.dataStatCounter[3].Share = formData.mais;
     console.log(this.rations);
     console.log(formData.rations);
   }
-
 }

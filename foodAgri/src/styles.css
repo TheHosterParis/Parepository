@@ -3,11 +3,76 @@
 /* Add padding for the nav bar */
 body {
   padding-top: 4.5rem;
+  /* background-color: rgb(29, 70, 182); */
 }
-
+.card {
+  background-color: rgb(228, 240, 250);
+}
 /* Style debug info in alerts */
 .alert-pre {
   word-wrap: break-word;
   word-break: break-all;
   white-space: pre-wrap;
+}
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
+
+.imgDash {
+  display: block;
+  max-width:150px;
+  max-height:150px;
+  width: auto;
+  height: auto;
+}
+
+.containerDash {
+  display: block;
+  width: 100%;
+}
+
+.cardDash {
+  border: 1px solid black;
+  float: left;
+  margin: 1px;
+  padding: 10px 3px;
+  /*setting width for each and every cardDash element as well as -10px for removing the margin width for 5 elements*/
+  width: calc( 100% / 3 - 10px);
+}
+/*first element*/
+
+.containerDash .cardDash:first-child {
+  margin-left: 0;
+}
+
+
+/*last element of the first row*/
+
+.containerDash .cardDash:nth-child(3n) {
+  margin-right: 0;
+}
+
+
+/*first-element of the 2nd row*/
+
+.containerDash .cardDash:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+
+/*last element*/
+
+.containerDash .cardDash:last-child {
+  margin-right: 0;
 }

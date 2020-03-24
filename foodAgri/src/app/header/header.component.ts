@@ -43,6 +43,10 @@ export class HeaderComponent implements OnInit {
   }
 
   onSubmit(formData): void {
+    this.authenticated = true;
+  }
+
+  onSubmit2(formData): void {
     const email = 'y.mouenmakoua@gmail.com';
     const mdp = '1789';
     if (formData.email === email && formData.pwd === mdp) {
