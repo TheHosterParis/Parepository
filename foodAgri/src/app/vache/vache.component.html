@@ -1,0 +1,18 @@
+<table class='table'>
+  <thead>
+    <tr>
+      <th>IDVache</th>
+      <th>NameVache</th>
+      <th>Date Naissance</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vache of vaches;">
+      <td>{{vache.id}}</td>
+      <td>{{vache.name}}</td>
+      <td>{{vache.birth}}</td>
+      <td>{{vache.description}}</td>
+    </tr>
+  </tbody>
+</table>
